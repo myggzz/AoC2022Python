@@ -1,0 +1,2 @@
+
+    lines = f.readlines()
