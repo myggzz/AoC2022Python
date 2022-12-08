@@ -5,10 +5,6 @@ data = text_file.read().split('\n\n')
 #Remove numbers
 crates = data[0]
 
-crates = [row[1::4] for row in crates.splitlines()]
-
-print(crates)
-exit()
 crates = [i.split('   ') for i in crates]
 crates_array = [[] for i in range(9)]
 index_to_insert_into = 0
@@ -17,7 +13,6 @@ for row in crates:
     for crate_list in row:
         curr_boxes = crate_list.split('] [')
         for box in curr_boxes:
-
             current_box = box.strip(' ').strip('[').strip(']')
             if current_box != "":
                 crates_array[index_to_insert_into].append(current_box)
