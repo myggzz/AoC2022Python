@@ -37,10 +37,19 @@ for folder in file_system:
             if folder2["path"] == folder["path"][0:i]:
                 folder2["size"] += folder["size"]
 
+#Part1
 total = 0
 for folder in file_system:
     if folder["size"] <= 100000:
         total += folder["size"]
-print(total)
 
-
+#Part 2
+goal = 30000000 - (70000000 - file_system[0]["size"])
+sort_sizes = []
+for folder in file_system:
+    sort_sizes.append(folder["size"])
+sort_sizes.sort()
+for size in sort_sizes:
+    if size > goal:
+        print(size)
+        break
