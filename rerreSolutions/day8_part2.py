@@ -25,14 +25,7 @@ for count_row, row in enumerate(data):
         trees_up = [y_row[count_tree] for y_row in data[:count_row]]
         trees_up.reverse()
         trees_down = [y_row[count_tree] for y_row in data[count_row+1:]]
-
         surrounding_trees = [trees_right, trees_left, trees_up, trees_down]
-
-        #print(tree)
-        #print(trees_left)
-        #print(trees_right)
-        #print(trees_up)
-        #print(trees_down)
 
         this_visible_trees = 1
         for trees in surrounding_trees:
