@@ -11,8 +11,8 @@ def check_inside_trees(height, width, input, total_visible):
     for row in range(1, height - 1):
         # For every column in that row except first and last column
         for column in range(1, width - 1):
-            # print(row, column, input[row][column])
             tree_visibility = {"up": True, "down": True, "left": True, "right": True}
+            # check up
             for above_rows in range(row):
                 if input[row][column] <= input[above_rows][column]:
                     tree_visibility["up"] = False
