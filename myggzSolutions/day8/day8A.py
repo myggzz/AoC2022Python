@@ -5,7 +5,6 @@ def count_edge_trees(input):
     edge_tree_count = ((len(input[0]) * 2) + (len(input) * 2)) - 4
     return edge_tree_count
 
-
 def check_inside_trees(height, width, input, total_visible):
     # For every treerow except first and last row
     for row in range(1, height - 1):
