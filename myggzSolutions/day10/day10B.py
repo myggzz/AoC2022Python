@@ -2,7 +2,6 @@ input = open("input.txt", "r").read().splitlines()
 
 cycle_count = 0
 x = 1
-signal_str = []
 crt_x = 0
 
 
